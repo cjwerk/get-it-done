@@ -1,5 +1,6 @@
 var issueContainerEl = document.querySelector("#issues-container");
 var limitWarningEl = document.querySelector("#limit-warning");
+var queryString = document.location.search;
 
 
 
@@ -62,3 +63,7 @@ var linkEl = document.createElement("a");
 
   // append to warning container
   limitWarningEl.appendChild(linkEl);
+
+  var repoEl = document.createElement("a");
+repoEl.classList = "list-item flex-row justify-space-between align-center";
+repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
